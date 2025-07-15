@@ -1,0 +1,212 @@
+.student-schedule-details__container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f5f6fa;
+}
+
+.student-schedule-details__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.student-schedule-details__title {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.student-schedule-details__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.student-schedule-details__error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f5c6cb;
+}
+
+.student-schedule-details__card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.student-schedule-details__section {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.student-schedule-details__section:last-child {
+  border-bottom: none;
+}
+
+.student-schedule-details__section-title {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.student-schedule-details__row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.student-schedule-details__label {
+  font-weight: 600;
+  width: 120px;
+  color: #555;
+  flex-shrink: 0;
+}
+
+.student-schedule-details__value {
+  color: #333;
+  flex: 1;
+}
+
+.student-schedule-details__description {
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.student-schedule-details__status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.student-schedule-details__status--scheduled {
+  background-color: rgba(30, 144, 255, 0.1);
+  color: #1e90ff;
+}
+
+.student-schedule-details__status--in-progress {
+  background-color: rgba(255, 159, 67, 0.1);
+  color: #ff9f43;
+}
+
+.student-schedule-details__status--completed {
+  background-color: rgba(40, 199, 111, 0.1);
+  color: #28c76f;
+}
+
+.student-schedule-details__status--cancelled {
+  background-color: rgba(234, 84, 85, 0.1);
+  color: #ea5455;
+}
+
+.student-schedule-details__status--enrolled {
+  background-color: rgba(40, 199, 111, 0.1);
+  color: #28c76f;
+  margin-left: 8px;
+}
+
+.student-schedule-details__status--not-enrolled {
+  background-color: rgba(234, 84, 85, 0.1);
+  color: #ea5455;
+  margin-left: 8px;
+}
+
+.student-schedule-details__full {
+  color: #ea5455;
+  font-weight: 600;
+}
+
+.student-schedule-details__available {
+  color: #28c76f;
+  font-weight: 600;
+}
+
+.student-schedule-details__button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.student-schedule-details__button:hover {
+  transform: translateY(-2px);
+}
+
+.student-schedule-details__button:active {
+  transform: translateY(0);
+}
+
+.student-schedule-details__button--primary {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.student-schedule-details__button--primary:hover {
+  background-color: #187bcd;
+}
+
+.student-schedule-details__button--secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.student-schedule-details__button--secondary:hover {
+  background-color: #e9ecef;
+}
+
+.student-schedule-details__enrollment-status {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-schedule-details__enrollment-status p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.student-schedule-details__eligibility-message {
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+@media (max-width: 768px) {
+  .student-schedule-details__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .student-schedule-details__title {
+    margin-bottom: 10px;
+  }
+  
+  .student-schedule-details__row {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .student-schedule-details__label {
+    margin-bottom: 5px;
+  }
+} 

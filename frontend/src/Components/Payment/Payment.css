@@ -1,0 +1,248 @@
+.payment-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f7fb;
+}
+
+.payment-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+}
+
+.payment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.payment-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1f36;
+}
+
+.payment-logo img {
+    height: 40px;
+}
+
+.payment-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.payment-timer {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1f36;
+}
+
+.payment-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.payment-form {
+    padding-right: 40px;
+    border-right: 1px solid #e6e8eb;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+.card-input-wrapper,
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-input-wrapper input,
+.input-wrapper input {
+    width: 100%;
+    padding: 15px 45px;
+    border: 1px solid #e6e8eb;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #1a1f36;
+    transition: all 0.3s ease;
+}
+
+.card-icon {
+    position: absolute;
+    left: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.check-icon {
+    position: absolute;
+    right: 15px;
+    color: #00a3ff;
+}
+
+.show-hide-btn {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #8792a2;
+    cursor: pointer;
+}
+
+.expiry-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.expiry-inputs input {
+    padding: 15px;
+    text-align: center;
+}
+
+.pay-now-btn {
+    width: 100%;
+    padding: 15px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pay-now-btn:hover {
+    background: #0052cc;
+}
+
+/* Card Preview Styles */
+.payment-details {
+    padding-left: 20px;
+}
+
+.card-preview {
+    background: linear-gradient(135deg, #434343 0%, #000000 100%);
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    height: 200px;
+}
+
+.card-preview .card-chip {
+    width: 45px;
+    height: 35px;
+    margin-bottom: 30px;
+}
+
+.card-preview .card-brand {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 40px;
+}
+
+.card-wifi {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 6C8.62 6 5.5 7.12 3 9L1.2 6.6C4.21 4.34 7.95 3 12 3C16.05 3 19.79 4.34 22.8 6.6L21 9C18.5 7.12 15.38 6 12 6zM16.84 13.41C17.18 13.75 17.18 14.09 16.84 14.43C15.25 16.02 13.75 16.82 12 16.82C10.25 16.82 8.75 16.02 7.16 14.43C6.82 14.09 6.82 13.75 7.16 13.41C8.75 11.82 10.25 11.02 12 11.02C13.75 11.02 15.25 11.82 16.84 13.41z"/></svg>');
+}
+
+.card-holder {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card-number {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.card-expiry {
+    font-size: 16px;
+}
+
+/* Payment Info Styles */
+.payment-info {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #64748b;
+}
+
+.info-row span:last-child {
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+.total-amount {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e6e8eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-amount span:first-child {
+    color: #64748b;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1f36;
+}
+
+@media (max-width: 768px) {
+    .payment-form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-form {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #e6e8eb;
+        padding-bottom: 30px;
+    }
+
+    .payment-details {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+} 

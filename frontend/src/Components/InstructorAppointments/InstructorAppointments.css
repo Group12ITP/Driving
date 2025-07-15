@@ -1,0 +1,144 @@
+.instructor-appointments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.instructor-appointments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.instructor-appointments-header h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #1a2530;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #c62828;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.empty-state h2 {
+    color: #455a64;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #78909c;
+}
+
+.appointments-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.appointments-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointments-list th {
+    background-color: #f5f7fa;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #455a64;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.appointments-list td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e6ed;
+    color: #37474f;
+}
+
+.appointments-list tr:last-child td {
+    border-bottom: none;
+}
+
+.appointments-list tr:hover {
+    background-color: #f9fafc;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.status-confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-completed {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-cancelled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+@media (max-width: 768px) {
+    .instructor-appointments-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .appointments-list {
+        overflow-x: auto;
+    }
+    
+    .appointments-list table {
+        min-width: 600px;
+    }
+} 

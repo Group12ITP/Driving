@@ -1,0 +1,271 @@
+@import '../Common/ButtonStyles.css';
+
+.usr-page {
+    background: #000;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.usr-search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.usr-search-container input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 15px;
+}
+
+.usr-search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.usr-search-container button {
+    padding: 12px 25px;
+    background: #ffc107;
+    border: none;
+    border-radius: 6px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.usr-search-container button:hover {
+    background: #d3a006;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.usr-table-container {
+    width: 100%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: visible; /* Remove horizontal scrolling */
+}
+
+.usr-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #333;
+    table-layout: fixed; /* Fixed layout for equal column widths */
+}
+
+.usr-users-table th, 
+.usr-users-table td {
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    word-wrap: break-word; /* Allow text to wrap in cells */
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.usr-users-table th {
+    font-weight: 600;
+    color: #ffc107;
+    border-bottom: 2px solid #eee;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.usr-users-table td {
+    color: #ffffff;
+}
+
+.usr-users-table tbody tr:hover {
+    background-color: #777575;
+}
+
+/* Action Buttons */
+.usr-action-buttons {
+    display: flex;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.usr-update-btn, .usr-delete-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.usr-update-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.usr-delete-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+.usr-update-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usr-delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove responsive adjustments that cause scrolling */
+@media (max-width: 1400px) {
+    .usr-table-container {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .usr-users-table {
+        width: 100%;
+        min-width: initial; /* Remove min-width */
+    }
+}
+
+@media (max-width: 768px) {
+    .usr-action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .usr-update-btn,
+    .usr-delete-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .usr-users-table th,
+    .usr-users-table td {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+}
+
+.usr-button-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 0 20px;
+    background: transparent;
+}
+
+.usr-button-1, .usr-button-2 {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.usr-button-1 {
+    background: #ffc107;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.usr-button-2 {
+    background: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.usr-button-1:hover, .usr-button-2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.usr-button-1:hover {
+    background: #c9990a;
+}
+
+.usr-button-2:hover {
+    background: #43a047;
+}
+
+.usr-no-results {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.usr-no-results p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .usr-page {
+        padding: 60px 15px;
+    }
+
+    .usr-search-container {
+        flex-direction: column;
+        margin: 20px 15px;
+    }
+
+    .usr-table-container {
+        margin: 10px;
+        width: calc(100% - 20px);
+        overflow-x: visible; /* Remove horizontal scrolling */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 70px;
+    margin: 0;
+    background: transparent;
+    font-family: Arial, sans-serif;
+}
+
+/* Action column styling */
+.usr-users-table th:last-child,
+.usr-users-table td:last-child {
+    width: 120px;
+}
+
+/* Override any white backgrounds */
+.usr-button-container, .usr-no-results {
+    background: transparent !important;
+}
+

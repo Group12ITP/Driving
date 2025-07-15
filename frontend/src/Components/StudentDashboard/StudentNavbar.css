@@ -1,0 +1,105 @@
+.student-navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+.navbar-user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin-bottom: 0.5rem;
+}
+
+.navbar-links a, .logout-btn {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navbar-links a:hover, .logout-btn:hover {
+  background-color: #444;
+  color: white;
+}
+
+.navbar-links a.active {
+  background-color: #ff9f43;
+  color: white;
+}
+
+.navbar-links svg {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.logout-btn {
+  color: #f44336;
+  margin-top: 2rem;
+}
+
+.logout-btn:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .student-navbar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+} 

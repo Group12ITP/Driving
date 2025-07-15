@@ -1,0 +1,409 @@
+.driving-school-home-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171616;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    gap: 15px;
+}
+  
+.driving-school-home-ll {
+    margin: 0;
+    padding: 0;
+}
+  
+.driving-school-home-ll h1 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+  
+.driving-school-home-ll a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 25px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+  
+.driving-school-home-ll a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.driving-school-login-btn {
+    margin-left: 20px; 
+}
+
+.driving-school-login-btn a {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9) !important;
+    padding: 8px 24px !important;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.driving-school-login-btn a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.driving-school-register-btn a {
+    background-color: #00cc88; 
+    color: white !important;
+    padding: 10px 24px !important;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.driving-school-register-btn a:hover {
+    background-color: #00d890;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.driving-school-home-ll:not(.driving-school-login-btn):not(.driving-school-register-btn) a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+
+button, 
+input[type="submit"], 
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    transition: all 0.3s ease;
+}
+
+
+.driving-school-login-btn a:active,
+.driving-school-register-btn a:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+
+.driving-school-users-page,
+.driving-school-contact-page {
+    padding-top: 90px; 
+    margin: 0;
+}
+
+
+.driving-school-nav-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .driving-school-home-ul {
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+
+    .driving-school-home-ll {
+        width: 100%;
+        text-align: center;
+    }
+
+    .driving-school-dropdown-content {
+        position: static;
+        background-color: rgba(255,255,255,0.1);
+        box-shadow: none;
+        display: none;
+    }
+
+    .driving-school-dropdown:hover .driving-school-dropdown-content {
+        display: block;
+    }
+}
+
+
+.driving-school-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.driving-school-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.driving-school-dropdown:hover .driving-school-dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.driving-school-dropdown-content a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.driving-school-dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00cc88 !important;
+    padding-left: 20px;
+}
+
+.driving-school-dropdown > .driving-school-home-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.driving-school-dropdown > .driving-school-home-a::after {
+    content: '▼';
+    font-size: 10px;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.driving-school-dropdown:hover > .driving-school-home-a::after {
+    transform: rotate(180deg);
+}
+
+
+@keyframes driving-school-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+}
+
+.driving-school-dropdown:hover .driving-school-dropdown-content {
+    animation: driving-school-fadeIn 0.3s ease forwards;
+}
+
+
+@media (max-width: 1024px) {
+    .driving-school-home-ul {
+        gap: 10px;
+    }
+    
+    .driving-school-home-ll h1 {
+        font-size: 14px;
+    }
+}
+
+/* User Profile Styles */
+.driving-school-user-profile {
+    margin-left: auto;
+    padding: 0 20px;
+}
+
+.driving-school-user-info {
+    color: white;
+    text-align: right;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.driving-school-user-name {
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.driving-school-user-email {
+    font-size: 12px;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+/* Logout Button Styles */
+.driving-school-logout-btn {
+    margin-left: 10px;
+}
+
+.driving-school-btn-logout {
+    background-color: #ff4444;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.driving-school-btn-logout:hover {
+    background-color: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.driving-school-btn-logout:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .driving-school-user-profile {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .driving-school-user-info {
+        text-align: center;
+    }
+    
+    .driving-school-logout-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .driving-school-btn-logout {
+        width: 100%;
+    }
+}
+
+/* Message Badge Styles */
+.driving-school-message-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff4444;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: 5px;
+  position: relative;
+  top: -8px;
+  font-weight: bold;
+  animation: driving-school-pulse 1.5s infinite;
+}
+
+@keyframes driving-school-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(255, 68, 68, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+  }
+}
+
+/* Add a highlight for the Courses menu item */
+.driving-school-home-ll a h1.driving-school-course-highlight {
+  color: #4361ee;
+  position: relative;
+}
+
+.driving-school-home-ll a h1.driving-school-course-highlight::after {
+  content: "New";
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  background-color: #ff3366;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.driving-school-home-ll a h1.driving-school-course-highlight::after {
+  animation: driving-school-pulse 1.5s infinite;
+}
+  
+.driving-school-new-badge {
+  background-color: #ff4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-weight: bold;
+  animation: driving-school-pulse 2s infinite;
+}
+  

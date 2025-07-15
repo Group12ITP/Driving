@@ -1,0 +1,454 @@
+@import '../UserDetails/users.css';
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 1; /* Ensure buttons are clickable */
+  pointer-events: auto; /* Explicitly enable clicking */
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #388e3c;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.save-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #1976d2;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* Fix for button click issues */
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.apt-container {
+  max-width: 1200px;
+  margin:  auto;
+  padding: 20px;
+  background: #000;
+  min-height: 100vh;
+  padding: 80px 20px;
+  margin-top:0;
+}
+
+.apt-table-container {
+  width: 100%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: visible;
+}
+
+.apt-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #333;
+  table-layout: fixed;
+}
+
+.apt-table th, 
+.apt-table td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.apt-table th {
+  font-weight: 600;
+  color: #ffc107;
+  border-bottom: 2px solid #eee;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.apt-table td {
+  color: #ffffff;
+}
+
+.apt-table tbody tr:hover {
+  background-color: #777575;
+}
+
+/* Action Buttons */
+.apt-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apt-update-btn, .apt-delete-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.apt-update-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.apt-delete-btn {
+  background-color: #dc3545;
+  color: white;
+  margin-top: 5px;
+}
+
+.apt-update-btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apt-delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.apt-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.apt-modal {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.apt-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.apt-modal-header h3 {
+  margin: 0;
+  color: #ffc107;
+  font-size: 20px;
+}
+
+.apt-close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.apt-form-group {
+  margin-bottom: 15px;
+}
+
+.apt-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.apt-form-group input, 
+.apt-form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.apt-form-group input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.apt-form-group select {
+  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+.apt-form-group select option {
+  background-color: #fff;
+  color: #000;
+}
+
+.apt-form-group input:focus, 
+.apt-form-group select:focus {
+  outline: none;
+  border-color: #ffc107;
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+}
+
+.apt-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.apt-save-btn, .apt-cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.apt-save-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.apt-save-btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apt-cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.apt-cancel-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Report Actions Styling */
+.apt-report-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.apt-download-btn, 
+.apt-whatsapp-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.apt-download-btn {
+  background-color: #ffc107;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.apt-whatsapp-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.apt-download-btn:hover, 
+.apt-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.apt-download-btn:hover {
+  background-color: #e0a800;
+}
+
+.apt-whatsapp-btn:hover {
+  background-color: #43a047;
+}
+
+@media (max-width: 768px) {
+  .apt-container {
+    padding: 60px 15px;
+  }
+
+  .apt-table-container {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .apt-table th,
+  .apt-table td {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .apt-update-btn,
+  .apt-delete-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .apt-report-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

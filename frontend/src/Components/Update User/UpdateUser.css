@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.updateuser-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  margin-top: 70px;
+}
+
+.updateuser-auth-card {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.updateuser-welcome-section {
+  background-color: rgba(33, 33, 33, 0.95);
+  color: white;
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.updateuser-welcome-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.updateuser-welcome-section p {
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  max-width: 260px;
+}
+
+.updateuser-sign-btn {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 12px 45px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.updateuser-sign-btn:hover {
+  background-color: #FFD700;
+  color: #212121;
+}
+
+.updateuser-logo {
+  margin-bottom: 40px;
+}
+
+.updateuser-form-section {
+  flex: 1.2;
+  padding: 60px 40px;
+  background-color: #f5f5f5;
+}
+
+.updateuser-form-section h2 {
+  color: #212121;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.updateuser-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.updateuser-input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.updateuser-input-field input,
+.updateuser-input-field select.updateuser-gender-select {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #212121;
+}
+
+.updateuser-input-field input[type="number"].updateuser-age-input {
+  -moz-appearance: textfield;
+}
+
+.updateuser-input-field input[type="number"].updateuser-age-input::-webkit-outer-spin-button,
+.updateuser-input-field input[type="number"].updateuser-age-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.updateuser-input-field select.updateuser-gender-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.updateuser-input-field i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.updateuser-input-field .updateuser-select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.updateuser-input-field input:focus,
+.updateuser-input-field select.updateuser-gender-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.updateuser-input-field input::placeholder {
+  color: #777;
+}
+
+.updateuser-signup-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #FFD700;
+  color: #212121;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.updateuser-signup-btn:hover {
+  background-color: #ffc400;
+}
+
+@media (max-width: 768px) {
+  .updateuser-auth-card {
+    flex-direction: column;
+  }
+  
+  .updateuser-welcome-section,
+  .updateuser-form-section {
+    padding: 40px 20px;
+  }
+} 

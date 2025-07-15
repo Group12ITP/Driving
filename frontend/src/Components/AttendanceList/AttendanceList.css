@@ -1,0 +1,232 @@
+.atd-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #000;
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+.atd-filter-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.atd-filter-title {
+  color: #ffc107;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.atd-date-inputs {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.atd-date-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+
+.atd-date-inputs input {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.atd-filter-btn, .atd-reset-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.atd-filter-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.atd-reset-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.atd-filter-btn:hover {
+  background-color: #d3a006;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.atd-reset-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.atd-table-container {
+  width: 100%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: visible;
+}
+
+.atd-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #333;
+  table-layout: fixed;
+}
+
+.atd-table th, 
+.atd-table td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.atd-table th {
+  font-weight: 600;
+  color: #ffc107;
+  border-bottom: 2px solid #eee;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.atd-table td {
+  color: #ffffff;
+}
+
+.atd-table tbody tr:hover {
+  background-color: #777575;
+}
+
+.atd-status-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #000;
+}
+
+.atd-status-select option {
+  background-color: #fff;
+  color: #000;
+}
+
+.atd-status-select.present {
+  border-color: #28a745;
+}
+
+.atd-status-select.absent {
+  border-color: #dc3545;
+}
+
+.atd-status-select.late {
+  border-color: #ffc107;
+}
+
+.atd-status-editor {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.atd-update-btn {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.atd-delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.atd-update-btn:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.atd-delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.atd-loading, .atd-no-records, .atd-error-message {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 18px;
+}
+
+.atd-error-message {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+@media (max-width: 768px) {
+  .atd-container {
+    padding: 60px 15px;
+  }
+
+  .atd-date-inputs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .atd-table-container {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .atd-table th,
+  .atd-table td {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .atd-update-btn,
+  .atd-delete-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,1113 @@
+@import '../Common/ButtonStyles.css';
+
+/* Main Payment Containers */
+.payments-container {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+}
+
+.payments-page {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+  ),
+  url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 80px 20px;
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: transparent !important;
+  padding: 20px;
+}
+
+.payments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  background: transparent;
+}
+
+.payments-header h1 {
+  color: #FFD700;
+  font-size: 32px;
+  margin: 0;
+}
+
+.add-payment-btn {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-payment-btn:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Search and Filter */
+.search-container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(50, 50, 50, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(70, 70, 70, 0.5);
+  color: white;
+  font-size: 15px;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-container button {
+  padding: 12px 25px;
+  background: #FFD700;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  padding: 0 20px;
+}
+
+.filter-container select {
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(70, 70, 70, 0.5);
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Table Container */
+.table-container {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  background: #2a2a2a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payments-table thead {
+  background: #1a1a1a;
+}
+
+.payments-table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #FFD700;
+  border-bottom: 2px solid #444;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.payments-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+  color: #e0e0e0;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.edit-btn {
+  background-color: #FFD700;
+  color: black;
+}
+
+.edit-btn:hover {
+  background-color: #e6c200;
+}
+
+.delete-btn {
+  background-color: #444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #666;
+}
+
+.error-message {
+  background-color: #333;
+  color: #FFD700;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #FFD700;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.no-data {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 80px;
+}
+
+.status-badge.pending {
+  background-color: #FFD700;
+  color: black;
+}
+
+.status-badge.completed {
+  background-color: #555;
+  color: white;
+}
+
+.status-badge.failed {
+  background-color: #333;
+  color: white;
+}
+
+.status-badge.refunded {
+  background-color: #666;
+  color: white;
+}
+
+.status-badge.partially-paid {
+  background-color: #888;
+  color: white;
+}
+
+/* Button Container */
+.button-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding: 0 20px;
+  background: transparent !important;
+}
+
+.button-1, .button-2 {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-1 {
+  background: #FFD700;
+}
+
+.button-2 {
+  background: #aaa;
+}
+
+.button-1:hover, .button-2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-1:hover {
+  background: #e6c200;
+}
+
+.button-2:hover {
+  background: #999;
+}
+
+/* Add Payment Form Styles */
+.add-payment-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #222 !important;
+  border-radius: 10px;
+  box-shadow: none;
+  color: #fff;
+  overflow: hidden;
+}
+
+.add-payment-header {
+  background: transparent;
+  padding: 20px 30px;
+  color: white;
+}
+
+.add-payment-header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #FFD700;
+}
+
+.back-button {
+  background: rgba(70, 70, 70, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(100, 100, 100, 0.5);
+  transform: translateY(-2px);
+}
+
+.payment-form {
+  padding: 30px;
+  background: transparent;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+}
+
+.form-section {
+  background: #333;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin-left: 100px;
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.form-group2 label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #FFD700;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.form-group2  label::after {
+  content: '';
+}
+
+.form-group2 label[for="studentId"]::after,
+.form-group2 label[for="studentName"]::after,
+.form-group2 label[for="amount"]::after,
+.form-group label[for="dueDate"]::after,
+.form-group label[for="paymentMethod"]::after,
+.form-group label[for="courseId"]::after {
+  content: ' *';
+  color: #FFD700;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD700;
+  z-index: 1;
+
+}
+
+.input-with-icon input,
+.input-with-icon select,
+.input-with-icon textarea {
+  width: 100%;
+  padding: 15px 15px 15px 40px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #444;
+  color: white;
+  height: 48px;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus,
+.input-with-icon textarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+  outline: none;
+  background-color: #555;
+  color: white;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  margin-left:350px;
+}
+
+.error-message {
+  margin: 0 30px;
+  padding: 15px;
+  background-color: #333;
+  border-left: 4px solid #FFD700;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Required field indicator */
+.form-group label[for="studentId"]::after,
+.form-group label[for="studentName"]::after,
+.form-group label[for="amount"]::after,
+.form-group label[for="dueDate"]::after,
+.form-group label[for="paymentMethod"]::after,
+.form-group label[for="courseId"]::after {
+  content: ' *';
+  color: #FFD700;
+}
+
+/* Select styles */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 40px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Total amount field */
+.input-with-icon.total-amount input {
+  font-weight: 600;
+  background-color: rgba(255, 215, 0, 0.05);
+  border-color: rgba(255, 215, 0, 0.3);
+  color: #FFD700;
+}
+
+/* Smooth transitions for better UX */
+.form-section, 
+.form-group input, 
+.form-group select, 
+.form-group textarea, 
+.submit-btn, 
+.cancel-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.form-section.full-width {
+  grid-column: 1 / -1;
+  width: calc(100% - 200px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payments-page {
+    padding: 60px 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    margin: 20px 15px;
+  }
+
+  .filter-container {
+    margin: 20px 15px;
+  }
+
+  .table-container {
+    margin: 20px 15px;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    margin: 20px 15px;
+  }
+
+  .payments-table {
+    font-size: 14px;
+    min-width: 1000px;
+  }
+
+  .payments-table th,
+  .payments-table td {
+    padding: 12px 15px;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .view-btn, .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .add-payment-container {
+    width: 96%;
+    border-radius: 15px;
+  }
+
+  .add-payment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .back-button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .save-payment-btn {
+    max-width: 100%;
+  }
+
+  .form-section {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-section.full-width .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .form-section.full-width .form-grid .form-group {
+    grid-column: auto !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .form-section {
+    padding: 16px;
+  }
+  
+  .form-section h3 {
+    font-size: 15px;
+  }
+}
+
+/* Form field focus and icon styles */
+.form-group.focused label {
+  color: #FFD700;
+  font-weight: 600;
+}
+
+.form-group.focused input,
+.form-group.focused select,
+.form-group.focused textarea {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+}
+
+.input-with-icon.total-amount .field-icon {
+  color: #FFD700;
+}
+
+.clear-error {
+  background: none;
+  border: none;
+  color: #FFD700;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.clear-error:hover {
+  transform: scale(1.2);
+}
+
+/* Input placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  display: none;
+}
+
+/* Field transition effects */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #adb5bd;
+}
+
+/* Better options text handling in selects */
+select option {
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 8px;
+}
+
+/* Additional Information section */
+@media (min-width: 768px) {
+  .nested-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix full width section layout */
+.form-section.full-width textarea {
+  min-height: 80px;
+  width: 100%;
+  resize: vertical;
+}
+
+/* Fix text overflow in selects */
+select {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
+
+select option {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Fix nested grids */
+.form-section .form-grid {
+  margin-top: 0;
+}
+
+/* Total amount field */
+.input-with-icon.total-amount input {
+  font-weight: 600;
+  background-color: rgba(255, 215, 0, 0.05);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Add spacing between sections */
+.form-section {
+  margin-bottom: 20px;
+}
+
+/* Fix mobile layout */
+@media (max-width: 768px) {
+  .form-section .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .form-section .form-grid .form-group {
+    grid-column: auto !important;
+  }
+}
+
+/* Restore important stylings that were removed */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #FFD700;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+  background-color: #555;
+  color: white;
+}
+
+.form-group input:read-only {
+  background-color: #333;
+  cursor: not-allowed;
+  border-color: #444;
+  color: #aaa;
+}
+
+/* Adjust form grid columns based on screen size */
+@media (min-width: 992px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Restore missing button styles */
+.submit-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Loading animation for the submit button */
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.submit-btn:disabled::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  animation: spinner 0.8s linear infinite;
+  margin-right: 10px;
+}
+
+/* Enhanced focus state */
+.form-group.focused label {
+  color: #FFD700;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+.form-group.focused input,
+.form-group.focused select,
+.form-group.focused textarea {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.15);
+  background-color: #555;
+  color: white;
+}
+
+/* Clear error button */
+.clear-error {
+  background: none;
+  border: none;
+  color: #FFD700;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.clear-error:hover {
+  transform: scale(1.2);
+}
+
+/* Improve textarea appearance */
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+/* Style for number inputs */
+input[type="number"] {
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Enhance select dropdowns */
+select {
+  cursor: pointer;
+}
+
+/* Better spacing throughout the form */
+.form-grid {
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-payment-container {
+    width: 92%;
+    border-radius: 15px;
+  }
+  
+  .add-payment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .back-button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .payment-form {
+    padding: 15px 20px 25px;
+  }
+  
+  .form-section {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .submit-btn, .cancel-btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.save-payment-btn {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  justify-content: center;
+  width: 100%;
+  max-width: 250px;
+}
+
+.save-payment-btn:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.save-payment-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.submit-btn:disabled::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  animation: spinner 0.8s linear infinite;
+  margin-right: 10px;
+}
+
+.form-group.focused label {
+  color: #FFD700;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+.form-group.focused input,
+.form-group.focused select,
+.form-group.focused textarea {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.15);
+  background-color: #555;
+  color: white;
+}
+
+.clear-error {
+  background: none;
+  border: none;
+  color: #FFD700;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.clear-error:hover {
+  transform: scale(1.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+  line-height: 1.5;
+}
+
+input[type="number"] {
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+select {
+  cursor: pointer;
+}
+
+.form-grid {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-payment-container {
+    width: 92%;
+    border-radius: 15px;
+  }
+  
+  .add-payment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .back-button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .payment-form {
+    padding: 15px 20px 25px;
+  }
+  
+  .form-section {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .submit-btn, .cancel-btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.input-with-icon input[readonly] {
+  background-color: #333;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Override any white backgrounds */
+.button-container, .no-results {
+  background: transparent !important;
+}
+
+/* Ensure content wrapper is transparent */
+.content-wrapper {
+  background: transparent !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .table-container {
+    margin: 20px;
+    overflow-x: auto;
+  }
+  
+  .payments-table {
+    min-width: 1200px;
+  }
+}
+
+input[type="date"] {
+  color-scheme: dark;
+  padding-right: 10px !important;
+}
+
+/* Input field styles */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  display: none;
+}
+
+/* Enhance focus styles for better visibility */
+.input-with-icon input:focus,
+.input-with-icon select:focus,
+.input-with-icon textarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+  outline: none;
+  background-color: #555;
+  color: white;
+} 

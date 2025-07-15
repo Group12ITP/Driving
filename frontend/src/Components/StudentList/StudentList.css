@@ -1,0 +1,174 @@
+.student-list-container {
+    padding: 2rem;
+    background: #f4f6fa;
+    min-height: 100vh;
+}
+
+.student-list-header {
+    margin-bottom: 2rem;
+}
+
+.student-list-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.student-list-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c5ce7;
+    font-size: 1.2rem;
+}
+
+.progress-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.progress-button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.progress-button.active {
+    color: white;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.student-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.student-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.student-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+}
+
+.student-status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.student-info h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.student-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+.student-detail-item svg {
+    color: #6c5ce7;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .student-list-container {
+        padding: 1rem;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-filter {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .progress-button {
+        white-space: nowrap;
+    }
+} 

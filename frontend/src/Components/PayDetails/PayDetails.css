@@ -1,0 +1,311 @@
+/* PayDetails Container */
+.pay-details-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  min-height: auto;
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  
+}
+
+.pay-details-card1 {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #252424;
+  margin: 0 20px;
+  position: relative;
+  z-index: 20;
+  border-radius: 30px;
+}
+
+/* Left Section - Yellow Part with Avatar */
+.pay-details-left1 {
+  width: 40%;
+  background-color: #323231;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.avatar-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.avatar-container1 {
+  width: 120px;
+  height: 120px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon1 {
+  font-size: 4rem;
+  color: white;
+}
+
+.pay-details-left1 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffda0a;
+  font-weight: 500;
+  text-align: center;
+}
+
+.pay-details-left1 p {
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+  max-width: 80%;
+  text-align: center;
+}
+
+.circle-button1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffa500;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.circle-button1:hover {
+  background-color: #555;
+}
+
+/* Right Section - Form */
+.pay-details-right1 {
+  width: 60%;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.form-group1 {
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.form-group1 label {
+  width: 120px;
+  font-size: 0.9rem;
+  color: #ffda0a;
+  font-weight: 500;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.form-group1 input[type="text"],
+.form-group1 input[type="email"] {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: 1px solid #ffda0a;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #ffda0a;
+  background-color: #656262;
+  height: 40px;
+}
+
+/* Gender Radio Buttons */
+.gender-group1 {
+  margin-bottom: 1rem;
+}
+
+.radio-options1 {
+  display: flex;
+  gap: 2rem;
+}
+
+.radio-option1 {
+  display: flex;
+  align-items: center;
+}
+
+.radio-option1 input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Membership Radio Buttons */
+.membership-group1 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  width: 100px;
+  color: #111;
+  
+}
+
+.membership-group1 label {
+  width: 50px;
+  margin-right: 10px;
+  color: #ffda0a;
+}
+
+
+
+.membership-options1 {
+  display: flex;
+  gap: 0.6rem;
+  flex-grow: 1;
+  margin-left: 60px;
+}
+
+.membership-option1 {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+.membership-option1 input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Form Actions */
+.form-actions1 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancel-btn1 {
+  padding: 0.8rem 1.8rem;
+  background-color: #000000;
+  border: 1px solid #ffda0a;
+  color:  #ffda0a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+
+.save-btn1 {
+  padding: 0.8rem 1.8rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  color: #ffda0a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border: 1px solid #ffda0a;
+}
+
+.cancel-btn1:hover {
+  
+  text-decoration: underline;
+  background-color: #ffa500;
+  color: #000;
+}
+
+.save-btn1:hover {
+    background-color: #ffa500;
+    color: #000;
+}
+
+/* Navbar specific styles for this page */
+.nav-container1 {
+  margin-bottom: 0;
+}
+
+/* Fix footer */
+.driving-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .pay-details-container1 {
+    padding: 20px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .pay-details-card1 {
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .pay-details-left1,
+  .pay-details-right1 {
+    width: 100%;
+  }
+  
+  .pay-details-left1 {
+    padding: 2rem 1rem;
+  }
+  
+  .pay-details-right1 {
+    padding: 1.5rem;
+  }
+  
+  .form-group1,
+  .membership-group1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-group1 label,
+  .membership-group1 label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group1 input[type="text"],
+  .form-group1 input[type="email"] {
+    width: 100%;
+  }
+  
+  .membership-options1 {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+/* Footer styling will be inherited from the parent components */

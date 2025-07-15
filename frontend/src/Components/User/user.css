@@ -1,0 +1,145 @@
+.user-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    background-color: #fff;
+  }
+  
+  .user-table th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+  }
+  
+  .user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .search-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .search-btn:hover {
+    background-color: #0b7dda;
+  }
+  
+  .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .download-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #128C7E;
+  }
+  
+  button:focus {
+    outline-color: #4CAF50;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"]:focus {
+    outline-color: #2196F3;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+
+  .user-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .search-container {
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+.usr-update-btn, .usr-delete-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.usr-update-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.usr-delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.usr-update-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usr-delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .usr-update-btn, .usr-delete-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin: 2px;
+        display: inline-block;
+    }
+}
+
+.user-table th, .user-table td {
+    height: 30px; 
+    width: 90px; 
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #ddd;
+    
+}
+
+

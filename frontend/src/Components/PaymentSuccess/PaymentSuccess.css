@@ -1,0 +1,198 @@
+.dm-payment-success-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #000000;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 70px;
+}
+
+.dm-success-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.dm-success-icon {
+  color: #43a047;
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: dm-scaleIn 0.5s ease-in-out;
+}
+
+@keyframes dm-scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.dm-success-card h1 {
+  color: #32325d;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.dm-success-message {
+  color: #6b7c93;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.dm-order-details {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.dm-order-detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: #6b7c93;
+}
+
+.dm-order-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.dm-order-detail-item span:first-child {
+  font-weight: 500;
+  color: #32325d;
+}
+
+.dm-success-message-details {
+  color: #6b7c93;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.dm-success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dm-receipt-button, .dm-home-button {
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.dm-receipt-button {
+  background-color: white;
+  color: #6772e5;
+  border: 1px solid #6772e5;
+}
+
+.dm-receipt-button:hover {
+  background-color: #f8f9fa;
+}
+
+.dm-home-button {
+  background-color: #6772e5;
+  color: white;
+}
+
+.dm-home-button:hover {
+  background-color: #5469d4;
+  box-shadow: 0 4px 10px rgba(50, 50, 93, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.dm-receipt-button svg, .dm-home-button svg {
+  margin-right: 8px;
+}
+
+.dm-customer-support {
+  margin-top: 2rem;
+  text-align: center;
+  color: #6b7c93;
+  font-size: 0.9rem;
+}
+
+.dm-customer-support a {
+  color: #6772e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dm-customer-support a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .dm-payment-success-container {
+    padding: 1rem;
+  }
+  
+  .dm-success-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .dm-success-icon {
+    font-size: 4rem;
+  }
+  
+  .dm-success-card h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.dm-status-completed {
+  background-color: #43a047;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.dm-view-payments-button {
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #32325d;
+  color: white;
+}
+
+.dm-view-payments-button:hover {
+  background-color: #1a1a2e;
+  box-shadow: 0 4px 10px rgba(50, 50, 93, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.dm-view-payments-button svg {
+  margin-right: 8px;
+}
+

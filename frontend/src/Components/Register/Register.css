@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.register-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  margin-top: 70px;
+}
+
+.register-auth-card {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Left section */
+.register-welcome-section {
+  background-color: rgba(33, 33, 33, 0.95);
+  color: white;
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.register-welcome-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #FFD700; /* Yellow color */
+}
+
+.register-welcome-section p {
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  max-width: 260px;
+}
+
+.register-sign-btn {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 12px 45px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.register-sign-btn:hover {
+  background-color: #FFD700;
+  color: #212121;
+}
+
+.register-logo {
+  margin-bottom: 40px;
+}
+
+
+.register-form-section {
+  flex: 1.2;
+  padding: 60px 40px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form-section h2 {
+  color: #212121;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.register-social-icons {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.register-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.register-social-icon i {
+  font-size: 20px;
+}
+
+.register-social-icon.register-facebook-icon {
+  background-color: #212121;
+  border-color: #212121;
+}
+
+.register-social-icon.register-facebook-icon i {
+  color: white;
+}
+
+.register-social-icon.register-google-icon {
+  background-color: #FFD700;
+  border-color: #FFD700;
+}
+
+.register-social-icon.register-google-icon i {
+  color: #212121;
+}
+
+.register-social-icon.register-instagram-icon {
+  background: #424242;
+  border-color: #424242;
+}
+
+.register-social-icon.register-instagram-icon i {
+  color: white;
+}
+
+.register-social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.register-or-text {
+  color: #777;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.register-input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.register-input-field i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.register-input-field input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #212121;
+}
+
+.register-input-field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.register-input-field input::placeholder {
+  color: #777;
+}
+
+.register-eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
+.register-error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.register-signup-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #FFD700;
+  color: #212121;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.register-signup-btn:hover {
+  background-color: #ffc400;
+}
+
+.register-input-field select.register-gender-select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #212121;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.register-input-field select.register-gender-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.register-input-field .register-select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    pointer-events: none;
+}
+
+.register-input-field select.register-gender-select option {
+    background-color: #e0e0e0;
+    color: #212121;
+    padding: 10px;
+}
+
+.register-input-field select.register-gender-select option:disabled {
+    color: #777;
+}
+
+.register-input-field select.register-gender-select:focus + .register-select-arrow {
+    color: #FFD700;
+}
+
+/* Remove spinner arrows from number input */
+.register-input-field input[type="number"].register-age-input {
+    -moz-appearance: textfield;
+}
+
+.register-input-field input[type="number"].register-age-input::-webkit-outer-spin-button,
+.register-input-field input[type="number"].register-age-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Ensure age input has same background and style as other inputs */
+.register-input-field input[type="number"].register-age-input {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #212121;
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    text-align: left;
+    direction: ltr;
+}
+
+.register-input-field input[type="number"].register-age-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.register-input-field input[type="number"].register-age-input::placeholder {
+    color: #777;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .register-auth-card {
+    flex-direction: column;
+  }
+  
+  .register-welcome-section {
+    padding: 40px 20px;
+  }
+  
+  .register-form-section {
+    padding: 40px 20px;
+  }
+} 

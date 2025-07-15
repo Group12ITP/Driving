@@ -1,0 +1,108 @@
+/* Common Button Container */
+.button-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding: 0 20px;
+  background: transparent !important;
+}
+
+/* Primary Action Buttons */
+.button-1, .button-2 {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-1 {
+  background: #00c3c7;
+}
+
+.button-2 {
+  background: #4CAF50;
+}
+
+.button-1:hover, .button-2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-1:hover {
+  background: #00a3a7;
+}
+
+.button-2:hover {
+  background: #43a047;
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.no-results p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    margin: 20px 15px;
+  }
+
+  .button-1, .button-2 {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Save Button Styles */
+.save-payment-btn {
+  background-color: #00c3c7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  justify-content: center;
+  width: 100%;
+  max-width: 250px;
+}
+
+.save-payment-btn:hover {
+  background-color: #00a3a7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.save-payment-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+} 

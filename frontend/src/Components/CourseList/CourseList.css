@@ -1,0 +1,325 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General container styles */
+.course-list {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e8f4ff;
+  animation: slideIn 0.5s ease-out;
+  min-height: calc(100vh - 2rem);
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  margin: 0.8rem auto;
+  border-radius: 2px;
+}
+
+/* Table styles */
+.course-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.course-table th {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  padding: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.course-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid #e8f4ff;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.course-table tr:last-child td {
+  border-bottom: none;
+}
+
+.course-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Button styles */
+.edit-button, .delete-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit-button {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
+}
+
+.edit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+.delete-button {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.2);
+}
+
+.delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Update form styles */
+.update-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  border: 2px solid #e8f4ff;
+  max-width: 800px;
+  animation: fadeIn 0.5s ease-out;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.update-form h2 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+  position: relative;
+  grid-column: 1 / -1;
+}
+
+.update-form h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.update-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.update-form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e8f4ff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+}
+
+.update-form input:hover {
+  border-color: #3498db;
+  background: white;
+}
+
+.update-form input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  background: white;
+}
+
+.update-button {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+.update-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
+.update-button:active {
+  transform: translateY(0);
+}
+
+/* Add Course Button */
+.add-course-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.add-course-button {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.add-course-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
+.add-course-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-list {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .course-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .course-table th,
+  .course-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .update-form {
+    padding: 1rem;
+    margin: 0.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .update-form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .update-form input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .update-button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
